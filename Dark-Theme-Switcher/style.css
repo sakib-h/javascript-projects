@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* Light theme colors */
+body[data-theme="light"] {
+	--color-1: #c4dcf1;
+	--color-2: #ffffff;
+	--color-3: #c8c8c8;
+	--color-4: #50526e;
+}
+/* Dark theme Colors */
+body[data-theme="dark"] {
+	--color-1: #1e1f26;
+	--color-2: #292c33;
+	--color-3: #27282a;
+	--color-4: #babaca;
+}
+body {
+	font-family: "Montserrat", sans-serif;
+	color: var(--color-4);
+}
+
+section {
+	background-color: var(--color-1);
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+	background-color: var(--color-2);
+	border-radius: 8px;
+	padding: 20px;
+	max-width: 500px;
+}
+h1 {
+	font-size: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+p {
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	line-height: 25px;
+}
+
+button {
+	background-color: var(--color-4);
+	padding: 10px 30px;
+	border: none;
+	outline: none;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: var(--color-2);
+	border-radius: 5px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.theme-switcher {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+}
+input {
+	width: 0;
+	height: 0;
+	visibility: hidden;
+}
+label {
+	display: block;
+	text-indent: -9999px;
+	height: 30px;
+	width: 60px;
+	background: aliceblue;
+	border-radius: 50px;
+	position: relative;
+	cursor: pointer;
+}
+
+label::after {
+	position: absolute;
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #13101f;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+}
