@@ -22,6 +22,7 @@ body[data-theme="dark"] {
 body {
 	font-family: "Montserrat", sans-serif;
 	color: var(--color-4);
+	transition: 0.3s ease color, 0.3s ease background-color;
 }
 
 section {
@@ -84,6 +85,7 @@ label {
 	border-radius: 50px;
 	position: relative;
 	cursor: pointer;
+	transition: 0.3s ease background-color;
 }
 
 label::after {
@@ -96,4 +98,14 @@ label::after {
 	top: 50%;
 	left: 5px;
 	transform: translateY(-50%);
+	transition: 0.3s ease;
+}
+input:checked + label {
+	background-color: #13101f;
+	/* border: 2px solid #f5f5f5; */
+}
+input:checked + label::after {
+	background-color: aliceblue;
+	left: calc(100% - 5px);
+	transform: translateX(-100%) translateY(-50%);
 }
