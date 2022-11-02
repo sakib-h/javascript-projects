@@ -31,3 +31,26 @@ h1 {
 .moreText {
 	display: none;
 }
+.readMoreBtn {
+	padding: 15px 60px;
+	background-color: aliceblue;
+	color: rgb(18, 23, 27);
+	border: none;
+	outline: none;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.readMoreBtn:active {
+	transform: scale(0.97);
+}
+
+.showMore .moreText {
+	display: inline;
+}
+
+.showMore .dots {
+	display: none;
+}
